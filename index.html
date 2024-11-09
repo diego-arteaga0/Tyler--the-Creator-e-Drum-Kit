@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+    <meta charset="UTF-8">
+    <title>Tyler, the Creator e-Drums</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <h1>Tyler, the Creator e-Drum Kit</h1>
+    <h2>Drumming Flower Boy, IGOR, Estate Sale, & Chromakopia</h2>
+<div class="keys">
+    <div data-key="65" class="key">
+        <kbd>A</kbd>
+        <span class="sound">snap</span>
+    </div>
+    <div data-key="83" class="key">
+        <kbd>S</kbd>
+        <span class="sound">hihat</span>
+    </div>
+    <div data-key="68" class="key"><kbd>D</kbd>
+        <span class="sound">openhat</span></div>
+    <div data-key="70" class="key"><kbd>F</kbd>
+        <span class="sound">ride</span></div>
+    <div data-key="71" class="key"><kbd>G</kbd>
+        <span class="sound">boom</span></div>
+    <div data-key="72" class="key"><kbd>H</kbd>
+        <span class="sound">kick</span></div>
+    <div data-key="74" class="key"><kbd>J</kbd>
+        <span class="sound">snare</span></div>
+    <div data-key="75" class="key"><kbd>K</kbd>
+        <span class="sound">vocal</span></div>
+    <div data-key="76" class="key"><kbd>L</kbd>
+        <span class="sound">tink</span></div>
+       
+</div>
+<btn id="muteButton" onclick="toggleMute()">🔇</btn>
+<audio data-key="65" src="music/igor/perc_running.wav" preload="auto"></audio> 
+<audio data-key="83" src="music/igor/Hat (911).wav" preload="auto"></audio> 
+<audio data-key="72" src="music/igor/Kick (911).wav" preload="auto"></audio> 
+<audio data-key="70" src="music/igor/vocal_ithink.wav" preload="auto"></audio> 
+
+<audio data-key="74" src="music/igor/Snare (IGOR'S THEME).wav" preload="auto"></audio> 
+<audio data-key="75" src="music/igor/perc_earfquake.wav" preload="auto"></audio> 
+<audio data-key="76" src="music/igor/perc_whatsgood.wav" preload="auto"></audio> 
+
+
+<audio id="music" src="music/Bass (IGOR'S THEME).wav" autoplay loop></audio>
+<script src="script.js"></script>
+</body>
+
+</html>
