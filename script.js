@@ -1,5 +1,6 @@
 let bgMusic = document.getElementById("music");
 bgMusic.volume = 0.6;
+let bg = document.body.style.backgroundImage;
 
 
 function playSound(e){
@@ -16,7 +17,6 @@ function removeTransition(e){
     this.classList.remove('playing');
 }
 
-
 //toggles mute for the background music playing
 function toggleMute(){
     const music = document.getElementById("music");
@@ -30,6 +30,26 @@ function toggleMute(){
         button.textContent = "🔊";
     }
 }
+
+function changeBackground(url){
+    bg = `url('${url}')`;
+}
+function changeFB(){
+    document.body.style.backgroundImage = "url('backgrounds/boy_1.jpg')";
+}
+function changeES(){
+    document.body.style.backgroundImage = "url('backgrounds/sale_1.png')";
+}
+function changeIGOR(){
+    document.body.style.backgroundImage = "url('backgrounds/2179245.jpg')";
+}
+function changeGOLF(){
+    document.body.style.backgroundImage = "url('backgrounds/golf.png')";
+}
+function changeWOLF(){
+    document.body.style.backgroundImage = "url('backgrounds/wolf.jpg')";
+}
+
 
 const keys = document.querySelectorAll('.key');
 keys.forEach(key => key.addEventListener('transitionend', removeTransition));
