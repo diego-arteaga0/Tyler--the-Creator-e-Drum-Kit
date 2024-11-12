@@ -12,11 +12,13 @@
     
     
     <div class="styles">
-        <button class="btn" id="wolf" onclick="changeWOLF()">Wolf</button>
-        <button class="btn" id="fb" onclick="changeFB()">Flower Boy</button>
-        <button class="btn" id="igor" onclick="changeIGOR()">IGOR</button>
-        <button class="btn" id="estate" onclick="changeES()">Estate Sale</button>
-        <button class="btn" id="golf" onclick="changeGOLF()">Golf</button>
+        <button class="btn" id="wolf" onclick="changeBG(this)"></button>
+        <button class="btn" id="cherry" onclick="changeBG(this)"></button>
+        <button class="btn" id="fb" onclick="changeBG(this)"></button>
+        <button class="btn" id="igor" onclick="changeBG(this)"></button>
+        <button class="btn" id="estate" onclick="changeBG(this)"></button>
+        <button class="btn" id="chroma" onclick="changeBG(this)"></button>
+        <button class="btn" id="golf" onclick="changeBG(this)"></button>
     </div>
 <div class="keys">
     <div data-key="65" class="key">
@@ -40,13 +42,16 @@
     <div data-key="75" class="key"><kbd>K</kbd>
         <span class="sound">yeah</span></div>
     <div data-key="76" class="key"><kbd>L</kbd>
-        <span class="sound">fx</span></div>
+        <span class="sound">clap</span></div>
        
 </div>
-<div class="bgm">
-    <button class="btn2" id="wolf" onclick="changeWOLF()">"Treehouse95"</button>
-    <button class="btn2" id="fb" onclick="changeFB()">"See You Again"</button>
-    <button class="btn2" id="igor" onclick="changeIGOR()">"IGOR'S THEME"</button>
+<div class="soundButton">
+    <button class="btn2" id="treehouse" onclick="musicTree()">Snare</button>
+    <button class="btn2" id="treehouse" onclick="musicTree()">Kick</button>
+
+    <button class="btn2" id="treehouse" onclick="musicTree()">"Treehouse95"</button>
+    <button class="btn2" id="seeYou" onclick="musicFB()">"See You Again"</button>
+    <button class="btn2" id="igorT" onclick="musicIgor()">"IGOR'S THEME"</button>
 </div>
 <btn id="muteButton" onclick="toggleMute()">🔇</btn>
 <audio data-key="65" src="music/igor/perc_running.wav" preload="auto"></audio> 

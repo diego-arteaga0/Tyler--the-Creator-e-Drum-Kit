@@ -31,24 +31,48 @@ function toggleMute(){
     }
 }
 
-function changeBackground(url){
-    bg = `url('${url}')`;
+function changeBG(button){
+    switch (button.id){
+        case "wolf":
+            document.body.style.backgroundImage = "url('backgrounds/wolf.jpg')";
+            break;
+        case "cherry":
+            document.body.style.backgroundImage = "url('backgrounds/cherry.jpeg')";
+            break;
+        case "fb":
+            document.body.style.backgroundImage = "url('backgrounds/boy_1.jpg')";
+            break;
+        case "igor":
+            document.body.style.backgroundImage = "url('backgrounds/igor5.jpg')";
+            break;
+        case "estate":
+            document.body.style.backgroundImage = "url('backgrounds/sale_1.png')";
+            break;
+        case "chroma":
+            document.body.style.backgroundImage = "url('backgrounds/chromakopia.jpg')";
+            break;
+        case "golf":
+            document.body.style.backgroundImage = "url('backgrounds/golf2.jpg')";
+            break;
+    }
+
+
+
 }
-function changeFB(){
-    document.body.style.backgroundImage = "url('backgrounds/boy_1.jpg')";
+
+
+function musicFB(){
+   const audio = document.getElementById("music").src = "music/seeYouAgain.mp3";
+   audio.play();
 }
-function changeES(){
-    document.body.style.backgroundImage = "url('backgrounds/sale_1.png')";
-}
-function changeIGOR(){
-    document.body.style.backgroundImage = "url('backgrounds/2179245.jpg')";
-}
-function changeGOLF(){
-    document.body.style.backgroundImage = "url('backgrounds/golf.png')";
-}
-function changeWOLF(){
-    document.body.style.backgroundImage = "url('backgrounds/wolf.jpg')";
-}
+function musicIgor(){
+    const audio = document.getElementById("music").src = "music/Bass (IGOR'S THEME).wav";
+    audio.play();
+ }
+ function musicTree(){
+    const audio = document.getElementById("music").src = "music/treehouse.mp3";
+    audio.play();
+ }
 
 
 const keys = document.querySelectorAll('.key');
@@ -56,5 +80,6 @@ keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 window.addEventListener('keydown', playSound);
 
 
-
-//drop down for each instrument to swap, swap background music, swap background photo/style
+//button drop down for each instrument, swap background music
+//change font/box color per style/album
+//fix keydown to avoid holding down button
