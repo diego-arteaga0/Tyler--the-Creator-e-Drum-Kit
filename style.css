@@ -27,12 +27,12 @@ body {
 }
 
 .btn {
-    margin-top: 30px;
+    margin-top: 20px;
     background: #fff;
     color: #222;
     font-weight: 500;
-    width: 91px;
-    height: 91px;
+    width: 99px;
+    height: 99px;
     border: 1px solid #222;
     padding: 10px;
     margin-left: 25px;
@@ -56,6 +56,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 #cherry {
@@ -63,6 +64,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 #igorT {
@@ -74,6 +76,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 #estate {
@@ -81,6 +84,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 #chroma {
@@ -88,6 +92,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 #fb {
@@ -95,6 +100,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 
 }
 #golf {
@@ -102,6 +108,7 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    outline: none;
 }
 
 .keys {
@@ -115,10 +122,10 @@ body {
 }
 
 .key {
-    border: 4px solid black;
+    border: 3px solid black;
     border-radius: 5px;
     margin: 1rem;
-    margin-bottom: 150px;
+    margin-bottom: 170px;
     font-size: 1.4rem;
     padding: 1rem .5rem;
     transition: all 0.07s;
@@ -148,6 +155,11 @@ kbd {
     color: #ffc600;
 }
 
+label.soundButton{
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+}
 .soundButton {
     display: flex;
     position: fixed;
@@ -157,18 +169,45 @@ kbd {
     bottom: 20px;
     left: 50%;
 }
-
+select {
+    appearance: none;           /* Removes default styling (especially useful on Safari) */
+    -webkit-appearance: none;    /* Removes default styling on WebKit browsers */
+    -moz-appearance: none;       /* Removes default styling on Mozilla */
+    
+    background-color: #4CAF50;   /* Button background color */
+    color: rgb(0, 0, 0);                /* Text color */
+    padding: 10px 20px;          /* Padding for comfortable click area */
+    font-size: 12px;             /* Font size */
+    border: none;                /* Removes default border */
+    border-radius: 5px;          /* Rounded corners */
+    cursor: pointer;             /* Pointer cursor on hover */
+    width: 200px;                /* Sets width of the button */
+    text-align: center;          /* Centers the text */
+}
+select::after {
+    content: "▲";                /* Unicode for down arrow */
+    position: absolute;
+    right: 10px;
+    color: rgb(0, 0, 0);
+}
+select option[value=""] {
+    color: gray;                 /* Gray color for the placeholder */
+}
+select:focus {
+    outline: none;               /* Removes default focus outline */
+    box-shadow: 0 0 5px #666;    /* Adds a subtle shadow on focus */
+}
 .btn2 {
     margin-top: 30px;
     background: #fff;
     color: #222;
     font-weight: 500;
-    width: 150px;
-    height: 50px;
+    width: 155px;
+    height: 45px;
     border: 1px solid #222;
     padding: 10px;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
@@ -182,6 +221,7 @@ kbd {
 .btn2:disabled {
     cursor: no-drop;
 }
+
 
 #muteButton {
     position: fixed;

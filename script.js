@@ -56,11 +56,22 @@ function changeBG(button){
             break;
     }
 
-
-
 }
 
 
+function changeSnare() {
+    const selectElement = document.getElementById("snare");
+    const selectedValue = selectElement.value;
+
+    // Change background color based on the selected value
+    switch (selectedValue) {
+        case "911":
+            break;
+        case "igor":
+            break;
+    }
+    selectElement.selectedIndex = 0;
+}
 function musicFB(){
    const audio = document.getElementById("music").src = "music/seeYouAgain.mp3";
    audio.play();

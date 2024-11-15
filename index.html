@@ -9,8 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    
-    
     <div class="styles">
         <button class="btn" id="wolf" onclick="changeBG(this)"></button>
         <button class="btn" id="cherry" onclick="changeBG(this)"></button>
@@ -20,6 +18,7 @@
         <button class="btn" id="chroma" onclick="changeBG(this)"></button>
         <button class="btn" id="golf" onclick="changeBG(this)"></button>
     </div>
+
 <div class="keys">
     <div data-key="65" class="key">
         <kbd>A</kbd>
@@ -43,15 +42,39 @@
         <span class="sound">yeah</span></div>
     <div data-key="76" class="key"><kbd>L</kbd>
         <span class="sound">clap</span></div>
-       
 </div>
-<div class="soundButton">
-    <button class="btn2" id="treehouse" onclick="musicTree()">Snare</button>
-    <button class="btn2" id="treehouse" onclick="musicTree()">Kick</button>
 
-    <button class="btn2" id="treehouse" onclick="musicTree()">"Treehouse95"</button>
-    <button class="btn2" id="seeYou" onclick="musicFB()">"See You Again"</button>
-    <button class="btn2" id="igorT" onclick="musicIgor()">"IGOR'S THEME"</button>
+<div class="soundButton">
+    <select class=btn2 id="snare" onchange="changeSnare()"> 
+        <option value="" selected disabled hidden>SNARES:</option>
+        <option value="911">"911"</option>
+        <option value="igor">"IGOR'S THEME"</option>
+    </select>
+    <select class="btn2" id="song"  onclick="musicTree()">
+        <option value="" selected disabled hidden>SONGS:</option>
+        <option value="treehouse">"Treehouse95"</option>
+        <option value="seeYou">"See You Again"</option>
+        <option value="seeYou">"IGOR'S THEME"</option>
+    </select>
+    <select class="btn2" id="song"  onclick="musicTree()">
+        <option value="" selected disabled hidden>KICKS:</option>
+        <option value="treehouse">"Treehouse95"</option>
+        <option value="seeYou">"See You Again"</option>
+        <option value="seeYou">"IGOR'S THEME"</option>
+    </select>
+    <select class="btn2" id="song"  onclick="musicTree()">
+        <option value="" selected disabled hidden>FX:</option>
+        <option value="treehouse">"Treehouse95"</option>
+        <option value="seeYou">"See You Again"</option>
+        <option value="seeYou">"IGOR'S THEME"</option>
+    </select>
+    <select class="btn2" id="song"  onclick="musicTree()">
+        <option value="" selected disabled hidden>CLAPS:</option>
+        <option value="treehouse">"Treehouse95"</option>
+        <option value="seeYou">"See You Again"</option>
+        <option value="seeYou">"IGOR'S THEME"</option>
+    </select>
+   
 </div>
 <btn id="muteButton" onclick="toggleMute()">🔇</btn>
 <audio data-key="65" src="music/igor/perc_running.wav" preload="auto"></audio> 
