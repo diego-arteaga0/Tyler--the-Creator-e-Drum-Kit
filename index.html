@@ -18,7 +18,6 @@
         <button class="btn" id="chroma" onclick="changeBG(this)"></button>
         <button class="btn" id="golf" onclick="changeBG(this)"></button>
     </div>
-
 <div class="keys">
     <div data-key="65" class="key">
         <kbd>A</kbd>
@@ -39,36 +38,49 @@
     <div data-key="74" class="key"><kbd>J</kbd>
         <span class="sound">tom</span></div>
     <div data-key="75" class="key"><kbd>K</kbd>
-        <span class="sound">yeah</span></div>
+        <span class="sound">vocal</span></div>
     <div data-key="76" class="key"><kbd>L</kbd>
         <span class="sound">clap</span></div>
 </div>
 
 <div class="soundButton">
     <select class=btn2 id="snare" onchange="changeSnare()"> 
-        <option value="" selected disabled hidden>SNARES:</option>
-        <option value="911">"911"</option>
+        <option value="" selected disabled hidden>CHANGE SNARE</option>
+        <option value="she">She</option>
+        <option value="answer">ANSWER</option>
+        <option value="garden">Garden Shed</option>
+        <option value="911">911</option>
+        <option value="igor">IGOR'S THEME</option>
+        <option value="earf">EARFQUAKE</option>
+        <option value="gone">GONE, GONE</option>
+        <option value="jugger">JUGGERNAUT</option>
+    </select>
+
+    <select class="btn2" id="song"  onclick="changeMusic()">
+        <option value="" selected disabled hidden>CHANGE SONG</option>
+        <option value="ing">"Inglorious"</option>
+        <option value="she">"She"</option>
+        <option value="tree">"Treehouse95"</option>
+        <option value="see">"See You Again"</option>
         <option value="igor">"IGOR'S THEME"</option>
+        <option value="side">"SIDE STREET"</option>
     </select>
-    <select class="btn2" id="song"  onclick="musicTree()">
-        <option value="" selected disabled hidden>SONGS:</option>
-        <option value="treehouse">"Treehouse95"</option>
-        <option value="seeYou">"See You Again"</option>
-        <option value="seeYou">"IGOR'S THEME"</option>
-    </select>
-    <select class="btn2" id="song"  onclick="musicTree()">
+
+    <select class="btn2" id="kick"  onclick="musicTree()">
         <option value="" selected disabled hidden>KICKS:</option>
-        <option value="treehouse">"Treehouse95"</option>
+        <option value="treehouse">"911"</option>
         <option value="seeYou">"See You Again"</option>
         <option value="seeYou">"IGOR'S THEME"</option>
     </select>
-    <select class="btn2" id="song"  onclick="musicTree()">
+
+    <select class="btn2" id="fx"  onclick="musicTree()">
         <option value="" selected disabled hidden>FX:</option>
         <option value="treehouse">"Treehouse95"</option>
         <option value="seeYou">"See You Again"</option>
         <option value="seeYou">"IGOR'S THEME"</option>
     </select>
-    <select class="btn2" id="song"  onclick="musicTree()">
+
+    <select class="btn2" id="clap"  onclick="musicTree()">
         <option value="" selected disabled hidden>CLAPS:</option>
         <option value="treehouse">"Treehouse95"</option>
         <option value="seeYou">"See You Again"</option>
@@ -83,7 +95,7 @@
 <audio data-key="70" src="music/igor/IGOR 808.wav" preload="auto"></audio> 
 
 <audio data-key="71" src="music/igor/Kick (911).wav" preload="auto"></audio> 
-<audio data-key="72" src="music/igor/Snare (IGOR'S THEME).wav" preload="auto"></audio> 
+<audio data-key="72" id="snareSound" src="music/snare/igor.wav" preload="auto"></audio> 
 <audio data-key="74" src="music/igor/NEW MAGIC WAND Tom 1.wav" preload="auto"></audio> 
 
 <audio data-key="70" src="music/igor/vocal_ithink.wav" preload="auto"></audio> 

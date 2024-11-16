@@ -138,8 +138,8 @@ body {
 
 .playing {
     transform: scale(1.1);
-    border-color: #ffc600;
-    box-shadow: 0 0 10px #ffc600;
+    border-color: #ffffff;
+    box-shadow: 0 0 10px #717171;
 
 }
 
@@ -152,7 +152,7 @@ kbd {
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #ffc600;
+    color: #00B140;
 }
 
 label.soundButton{
@@ -176,13 +176,17 @@ select {
     
     background-color: #4CAF50;   /* Button background color */
     color: rgb(0, 0, 0);                /* Text color */
-    padding: 10px 20px;          /* Padding for comfortable click area */
-    font-size: 12px;             /* Font size */
+    padding: 10px 15px;          /* Padding for comfortable click area */
+    font-size: min(2vw, 12px);     
+    box-sizing: border-box;        /* Font size */
+    text-overflow: ellipsis;
+    overflow: hidden;
     border: none;                /* Removes default border */
     border-radius: 5px;          /* Rounded corners */
     cursor: pointer;             /* Pointer cursor on hover */
-    width: 200px;                /* Sets width of the button */
-    text-align: center;          /* Centers the text */
+    width: 150px;                /* Sets width of the button */
+    text-align: center;    
+    white-space: nowrap;      /* Centers the text */
 }
 select::after {
     content: "▲";                /* Unicode for down arrow */
@@ -191,19 +195,28 @@ select::after {
     color: rgb(0, 0, 0);
 }
 select option[value=""] {
-    color: gray;                 /* Gray color for the placeholder */
+    color: rgb(20, 1, 1);       /* Gray color for the placeholder */
+}
+select option{
+    font-size: 13px;
+    box-sizing: border-box;        /* Font size */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;  
+    width:90%;
 }
 select:focus {
-    outline: none;               /* Removes default focus outline */
-    box-shadow: 0 0 5px #666;    /* Adds a subtle shadow on focus */
+    outline: black;               /* Removes default focus outline */
+    box-shadow: 0 0 5px #333333;    /* Adds a subtle shadow on focus */
 }
 .btn2 {
+    
     margin-top: 30px;
     background: #fff;
     color: #222;
     font-weight: 500;
     width: 155px;
-    height: 45px;
+    height: 40px;
     border: 1px solid #222;
     padding: 10px;
     margin-left: 20px;
@@ -220,6 +233,10 @@ select:focus {
 
 .btn2:disabled {
     cursor: no-drop;
+}
+.btn2 option{
+    background-color: white;
+    color:black;
 }
 
 
