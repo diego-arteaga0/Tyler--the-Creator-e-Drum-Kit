@@ -38,12 +38,37 @@
     <div data-key="74" class="key"><kbd>J</kbd>
         <span class="sound">tom</span></div>
     <div data-key="75" class="key"><kbd>K</kbd>
-        <span class="sound">vocal</span></div>
+        <span class="sound">fx</span></div>
     <div data-key="76" class="key"><kbd>L</kbd>
         <span class="sound">clap</span></div>
 </div>
 
 <div class="soundButton">
+
+    <select class="btn2" id="song"  onchange="changeMusic()">
+        <option value="" selected disabled hidden>CHANGE SONG</option>
+        <option value="ing">"Inglorious"</option>
+        <option value="she">"She"</option>
+        <option value="tree">"Treehouse95"</option>
+        <option value="see">"See You Again"</option>
+        <option value="igor">"IGOR'S THEME"</option>
+        <option value="side">"SIDE STREET"</option>
+    </select>
+
+    <select class="btn2" id="clap"  onchange="changeHH()">
+        <option value="" selected disabled hidden>CHANGE HIHAT</option>
+        <option value="treehouse">"Treehouse95"</option>
+        <option value="seeYou">"See You Again"</option>
+        <option value="seeYou">"IGOR'S THEME"</option>
+    </select>
+    
+    <select class="btn2" id="kick"  onchange="changeKick()">
+        <option value="" selected disabled hidden>CHANGE KICK</option>
+        <option value="treehouse">"911"</option>
+        <option value="seeYou">"See You Again"</option>
+        <option value="seeYou">"IGOR'S THEME"</option>
+    </select>
+
     <select class=btn2 id="snare" onchange="changeSnare()"> 
         <option value="" selected disabled hidden>CHANGE SNARE</option>
         <option value="she">She</option>
@@ -56,51 +81,29 @@
         <option value="jugger">JUGGERNAUT</option>
     </select>
 
-    <select class="btn2" id="song"  onclick="changeMusic()">
-        <option value="" selected disabled hidden>CHANGE SONG</option>
-        <option value="ing">"Inglorious"</option>
-        <option value="she">"She"</option>
-        <option value="tree">"Treehouse95"</option>
-        <option value="see">"See You Again"</option>
-        <option value="igor">"IGOR'S THEME"</option>
-        <option value="side">"SIDE STREET"</option>
-    </select>
-
-    <select class="btn2" id="kick"  onclick="musicTree()">
-        <option value="" selected disabled hidden>KICKS:</option>
-        <option value="treehouse">"911"</option>
-        <option value="seeYou">"See You Again"</option>
-        <option value="seeYou">"IGOR'S THEME"</option>
-    </select>
-
-    <select class="btn2" id="fx"  onclick="musicTree()">
-        <option value="" selected disabled hidden>FX:</option>
+    <select class="btn2" id="fx"  onchange="changeFX()">
+        <option value="" selected disabled hidden>CHANGE FX</option>
         <option value="treehouse">"Treehouse95"</option>
         <option value="seeYou">"See You Again"</option>
         <option value="seeYou">"IGOR'S THEME"</option>
     </select>
 
-    <select class="btn2" id="clap"  onclick="musicTree()">
-        <option value="" selected disabled hidden>CLAPS:</option>
-        <option value="treehouse">"Treehouse95"</option>
-        <option value="seeYou">"See You Again"</option>
-        <option value="seeYou">"IGOR'S THEME"</option>
-    </select>
+    
    
 </div>
 <btn id="muteButton" onclick="toggleMute()">🔇</btn>
 <audio data-key="65" src="music/igor/perc_running.wav" preload="auto"></audio> 
-<audio data-key="83" src="music/igor/Hat (911).wav" preload="auto"></audio> 
+<audio data-key="83" id="hhSound" src="music/igor/Hat (911).wav" preload="auto"></audio> 
 <audio data-key="68" src="music/igor/Tron Cat Ride.wav" preload="auto"></audio> 
-<audio data-key="70" src="music/igor/IGOR 808.wav" preload="auto"></audio> 
+<audio data-key="70" src="music/igor/808 Kick (Earl).wav" preload="auto"></audio> 
 
-<audio data-key="71" src="music/igor/Kick (911).wav" preload="auto"></audio> 
+<audio data-key="71" id="kickSound" src="music/igor/Kick (911).wav" preload="auto"></audio> 
 <audio data-key="72" id="snareSound" src="music/snare/igor.wav" preload="auto"></audio> 
 <audio data-key="74" src="music/igor/NEW MAGIC WAND Tom 1.wav" preload="auto"></audio> 
 
 <audio data-key="70" src="music/igor/vocal_ithink.wav" preload="auto"></audio> 
 
-<audio data-key="75" src="music/igor/Awkward Yeah.wav" preload="auto"></audio> 
+<audio data-key="75" id="fxSound" src="music/igor/Awkward Yeah.wav" preload="auto"></audio> 
 <audio data-key="76" src="music/igor/Clap (BOYFRIEND).wav" preload="auto"></audio> 
 
 

@@ -1,21 +1,33 @@
 let bgMusic = document.getElementById("music");
 bgMusic.volume = 0.7;
 let bg = document.body.style.backgroundImage;
+const pressedKeys = {};
 
+const selectElement = document.querySelector('select');
+let dropDown = false;
 
+//plays sound based on key
 function playSound(e){
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-    if(!audio) return;
-    audio.currentTime = 0;
-    audio.play();
-    key.classList.add('playing');
+    const keyCode = e.keyCode;
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
+        if(!audio) return;
+        
+        if(!pressedKeys[keyCode]){
+            pressedKeys[keyCode] = true;
+            audio.currentTime = 0;
+        audio.play();
+        key.classList.add('playing'); 
+        }
 }
 
+
 function removeTransition(e){
-const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`);
-if(!key) return;
-  key.classList.remove('playing');
+    const keyCode = e.keyCode;
+    const key = document.querySelector(`.key[data-key = "${e.keyCode}"]`);
+    if(!key) return;
+    key.classList.remove('playing');
+    pressedKeys[keyCode] = false;
 }
 
 //toggles mute for the background music playing
@@ -112,7 +124,7 @@ function changeMusic() {
     selectElement.selectedIndex = 0;
 }
 
-
+//changes sample sound for the snare drum based on selected option
 function changeSnare() {
     const selectElement = document.getElementById("snare");
     const selectedValue = selectElement.value;
@@ -149,9 +161,10 @@ function changeSnare() {
 }
 
 
-window.addEventListener('keyup', removeTransition);
-window.addEventListener('keydown', playSound);
+document.addEventListener('keydown', playSound);
 
+document.addEventListener('keyup', removeTransition);
+    
 
 //button drop down for each instrument
 //change font/box color per style/album, add to commits
