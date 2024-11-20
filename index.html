@@ -53,39 +53,56 @@
         <option value="see">"See You Again"</option>
         <option value="igor">"IGOR'S THEME"</option>
         <option value="side">"SIDE STREET"</option>
+        <option value="tmrw">"Tomorrow"</option>
     </select>
 
-    <select class="btn2" id="clap"  onchange="changeHH()">
+    <select class="btn2" id="hihat"  onchange="changeHH()">
         <option value="" selected disabled hidden>CHANGE HIHAT</option>
-        <option value="treehouse">"Treehouse95"</option>
-        <option value="seeYou">"See You Again"</option>
-        <option value="seeYou">"IGOR'S THEME"</option>
+        <option value="couch">"Couch"</option>
+        <option value="ifhy">"IFHY"</option>
+        <option value="park">"Parking Lot"</option>
+        <option value="okaga">"OKAGA, CA"</option>
+        <option value="911">"911"</option>
+        <option value="rose">"Rose Tinted Cheeks"</option>
+        <option value="earf">"EARFQUAKE"</option>
+        <option value="sweet">"SWEET / ITYWTD"</option>
+
     </select>
     
     <select class="btn2" id="kick"  onchange="changeKick()">
         <option value="" selected disabled hidden>CHANGE KICK</option>
-        <option value="treehouse">"911"</option>
-        <option value="seeYou">"See You Again"</option>
-        <option value="seeYou">"IGOR'S THEME"</option>
+        <option value="pigs">"Pigs"</option>
+        <option value="cherry">"Cherry Bomb"</option>
+        <option value="okaga">"OKAGA, CA"</option>
+        <option value="boredom">"Boredom"</option>
+        <option value="garden">"Garden Shed"</option>
+        <option value="911">"911"</option>
+        <option value="gone">"GONE, GONE"</option>
+        <option value="jugger">"JUGGERNAUT"</option>
     </select>
 
-    <select class=btn2 id="snare" onchange="changeSnare()"> 
+    <select class=btn2 id="snare" onchange="changeSnare()" onclick="handleSelectFocus()"> 
         <option value="" selected disabled hidden>CHANGE SNARE</option>
-        <option value="she">She</option>
-        <option value="answer">ANSWER</option>
-        <option value="garden">Garden Shed</option>
-        <option value="911">911</option>
-        <option value="igor">IGOR'S THEME</option>
-        <option value="earf">EARFQUAKE</option>
-        <option value="gone">GONE, GONE</option>
-        <option value="jugger">JUGGERNAUT</option>
+        <option value="she">"She"</option>
+        <option value="answer">"ANSWER"</option>
+        <option value="garden">"Garden Shed"</option>
+        <option value="911">"911"</option>
+        <option value="igor">"IGOR'S THEME"</option>
+        <option value="earf">"EARFQUAKE"</option>
+        <option value="gone">"GONE, GONE"</option>
+        <option value="jugger">"JUGGERNAUT"</option>
     </select>
 
     <select class="btn2" id="fx"  onchange="changeFX()">
         <option value="" selected disabled hidden>CHANGE FX</option>
-        <option value="treehouse">"Treehouse95"</option>
-        <option value="seeYou">"See You Again"</option>
-        <option value="seeYou">"IGOR'S THEME"</option>
+        <option value="tron">Cowbell (Tron Cat)</option>
+        <option value="wolf">Ugh (WOLF)</option>
+        <option value="yeah">Yeah (Awkward)</option>
+        <option value="domo">Oh (Domo23)</option>
+        <option value="pilot">Cowbell (PILOT)</option>
+        <option value="see">Stomp (See You Again)</option>
+        <option value="earf">Riser (EARFQUAKE)</option>
+        <option value="dance">Clave (SWEET / ITYWTD)</option>
     </select>
 
     
@@ -93,7 +110,7 @@
 </div>
 <btn id="muteButton" onclick="toggleMute()">🔇</btn>
 <audio data-key="65" src="music/igor/perc_running.wav" preload="auto"></audio> 
-<audio data-key="83" id="hhSound" src="music/igor/Hat (911).wav" preload="auto"></audio> 
+<audio data-key="83" id="hihatSound" src="music/igor/Hat (911).wav" preload="auto"></audio> 
 <audio data-key="68" src="music/igor/Tron Cat Ride.wav" preload="auto"></audio> 
 <audio data-key="70" src="music/igor/808 Kick (Earl).wav" preload="auto"></audio> 
 
@@ -103,7 +120,7 @@
 
 <audio data-key="70" src="music/igor/vocal_ithink.wav" preload="auto"></audio> 
 
-<audio data-key="75" id="fxSound" src="music/igor/Awkward Yeah.wav" preload="auto"></audio> 
+<audio data-key="75" id="fxSound" src="music/fx/Awkward Yeah.wav" preload="auto"></audio> 
 <audio data-key="76" src="music/igor/Clap (BOYFRIEND).wav" preload="auto"></audio> 
 
 
